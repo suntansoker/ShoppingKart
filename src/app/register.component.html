@@ -1,0 +1,31 @@
+<div>
+    <h1>Registration Form</h1>
+    <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm.value)">
+      <div>
+        <label for="emailid">EmailID: </label>
+        <input type="text" id="emailid" name="emailid" [(ngModel)]="emailid" required>
+      </div>
+      <div>
+        <label for="passwd">Password: </label>
+        <input type="password" id="passwd" name="passwd" [(ngModel)]="passwd" required>
+      </div>
+      <div>
+        <label for="firstname">First name: </label>
+        <input type="text" id="firstname" name="firstname" [(ngModel)]="firstname" required>
+      </div>
+      <div>
+        <label for="lastname">Last name: </label>
+        <input type="text" id="lastname" name="lastname" [(ngModel)]="lastname" required>
+      </div>
+      <div>
+        <label for="locate">Location: </label>
+        <input type="text" id="locate" name="locate" [(ngModel)]="locate" required>
+      </div>
+      <div>
+        <label for="mobile">Mobile Number: </label>
+        <input type="number" id="mobile" name="mobile" [(ngModel)]="mobile" required>
+      </div>
+      <br>
+      <button type="submit" [disabled]="regForm.invalid">Submit</button>
+    </form>
+  </div>

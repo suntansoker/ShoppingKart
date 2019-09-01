@@ -1,0 +1,20 @@
+<h1>Login</h1>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <div>
+      <label for="emailid">EmailID: </label>
+      <input type="text" id="emailid" name="emailid" [(ngModel)]="emailid" required>
+    </div>
+    <div>
+      <label for="passwd">Password: </label>
+      <input type="password" id="passwd" name="passwd" [(ngModel)]="passwd" required>
+    </div>
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+</form>
+<div *ngFor='let e of user'>
+  {{user[0].mobile}}
+  {{e.id}}<br>
+  {{e.emailid}}
+</div>
+
+<h1>New to this page?</h1>
+<button routerLink="../register">Register</button>

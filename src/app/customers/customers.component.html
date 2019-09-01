@@ -1,0 +1,12 @@
+<div>
+    <h2>{{title}}</h2>
+    <label>Search filter:</label>
+    <input type='text' [(ngModel)]='nameFilter'/> 
+    <ul>
+        <li *ngFor='let customer of customers | searchFilter: nameFilter'>
+            <a [routerLink]="customer.id">
+                {{customer.name}}
+            </a>
+        </li>
+    </ul>        
+</div>    

@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "name": "Lizol",
+      "description": "phenyl",
+      "manufacturer": "XYZ",
+      "price": 200,
+      "quantity": 2,
+      "id": 1
+    },
+    {
+      "name": "sayantan",
+      "description": "dhbfdhbf",
+      "manufacturer": "sjhfjshf",
+      "price": 69,
+      "quantity": 69,
+      "id": 3
+    },
+    {
+      "name": "erer",
+      "description": "erer",
+      "manufacturer": "erer",
+      "price": 34,
+      "quantity": 3,
+      "id": 5
+    },
+    {
+      "name": "sunday",
+      "description": "kdjfkd",
+      "manufacturer": "kdjfkd",
+      "price": 69,
+      "quantity": 3,
+      "id": 11
+    }
+  ]
+}

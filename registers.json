@@ -1,0 +1,58 @@
+{
+  "registers": [
+    {
+      "id": 1,
+      "emailid": "fgfgf",
+      "passwd": "fsgdvgfd",
+      "firstname": "fvfdv",
+      "lastname": "rffv",
+      "location": "fdgfv",
+      "mobile": 453545
+    },
+    {
+      "emailid": "sayantan@dkfjdk.com",
+      "passwd": "suntansoker",
+      "firstname": "kdfjkd",
+      "lastname": "llksds",
+      "location": "dkfldkfdl",
+      "mobile": 4545454,
+      "id": 2
+    },
+    {
+      "emailid": "sdsdsd",
+      "passwd": "szdsdsd",
+      "firstname": "sdcsc",
+      "lastname": "cacdsa",
+      "location": "sdsdsd",
+      "mobile": 45545,
+      "id": 3
+    },
+    {
+      "emailid": "rererere",
+      "passwd": "rererer",
+      "firstname": "dffds",
+      "lastname": "dfsdfs",
+      "location": "rerere",
+      "mobile": 3434343,
+      "id": 4
+    },
+    {
+      "emailid": "rogerfk",
+      "passwd": "rogerfk",
+      "firstname": "roger",
+      "lastname": "federer",
+      "location": "dfsdfsdf",
+      "mobile": 123456,
+      "id": 5
+    },
+    {
+      "emailid": "tdhgnfgf",
+      "passwd": "gzdbbgdr",
+      "firstname": "rdgtgd",
+      "lastname": "rgbgbt",
+      "location": "tbrbrt",
+      "mobile": 6565577,
+      "id": 6
+    }
+  ]
+}

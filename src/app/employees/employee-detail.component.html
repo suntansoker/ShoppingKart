@@ -1,0 +1,16 @@
+
+    <h2>Product Details</h2>
+    <div *ngFor='let employee of employees'>
+        <div *ngIf='employee.id===id'>  
+            <p><label>ID: </label>{{employee.id}}</p>
+            <p><label>Name: </label>{{employee.name}}</p>
+            <p><label>Description: </label>{{employee.description}}</p>
+            <p><label>Manufacturer: </label>{{employee.manufacturer}}</p>
+            <p><label>Price: </label>{{employee.price}}</p>
+            <p><label>Quantity: </label>{{employee.quantity}}</p>
+            <button [routerLink]="['edit']">Edit</button>
+            <button (click)="goBack()">Back</button>
+        </div>       
+    </div>
+   
+
