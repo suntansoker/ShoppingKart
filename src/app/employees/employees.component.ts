@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { EmployeesService } from './employees.service';
+import { AuthService } from '../auth.service';
 //import {EditEmployeeComponent} from './employee-edit.component';
 
 @Component({
@@ -11,7 +13,9 @@ export class EmployeesComponent implements OnInit {
   nameFilter: string = '';
   products: any[];
   //formref: any;
-  constructor(private _employeesService: EmployeesService 
+  constructor(private _employeesService: EmployeesService,
+    private _authService: AuthService,
+    private _router: Router
     //private _editEmployee:EditEmployeeComponent 
     ) { }
 
@@ -35,12 +39,21 @@ export class EmployeesComponent implements OnInit {
   //   //);
   // }
   deleteEmployee(empid) {
-    if(confirm("Are you sure you want to delete this?"))
-    {
-    this._employeesService.deleteEmployee(empid).subscribe(
-      (data:any) => this.getEmployees()
-    );
-    }
+    console.log(`Can delete be activated ?`);
+        if (this._authService.isLoggedIn()) {
+            console.log("Yes, the route can be activated as we are already logged in.");
+            if(confirm("Are you sure you want to delete this?"))
+              {
+              this._employeesService.deleteEmployee(empid).subscribe(
+                (data:any) => this.getEmployees()
+              );
+              }
+        }
+        else {
+            console.log("CANNOT ACTIVATE the route until logged in...");
+            this._router.navigate(['login']);
+        }
+    
   }
 
 }
