@@ -7,8 +7,8 @@
 
     <a *ngIf=!isLoggedIn() style="float:right" routerLink="login" routerLinkActive="active">Login</a>
     <a *ngIf=!isLoggedIn() style="float:right;padding-right:20px" routerLink="register" routerLinkActive="active">Register</a> 
-    <!-- <a *ngIf=isLoggedIn() style="float:right;padding-right:20px" routerLink="details" routerLinkActive="active">Profile</a> -->
     <a *ngIf=isLoggedIn() style="float:right" routerLink="logout" routerLinkActive="active" (click)="changeToLoginRoute()">Logout</a>
+   <!-- <a *ngIf=isLoggedIn() style="float:right;padding-right:20px" routerLink="profile" routerLinkActive="active">Profile</a> -->
 </nav>
 <div class="lds-spinner" *ngIf="isLoading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 <router-outlet></router-outlet>

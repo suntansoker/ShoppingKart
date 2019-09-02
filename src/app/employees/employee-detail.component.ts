@@ -19,7 +19,6 @@ export class EmployeeDetailComponent implements OnInit {
     ngOnInit(): void {
         this.route.params.forEach((params: Params) => {
             this.id = +params['id'];
-            
             console.log(`id is ${this.id}`);
         });
      //this.employee = this._employeesService.getEmployee(this.id)
@@ -27,7 +26,6 @@ export class EmployeeDetailComponent implements OnInit {
         (employees:Employee[]) =>  this.employees = employees,
         err => console.log(err)
       );
-    
     }
 
     goBack(): void {

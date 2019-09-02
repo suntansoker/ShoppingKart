@@ -1,0 +1,9 @@
+<h2>Profile Details</h2>
+    <div *ngFor= 'let detail of details'>
+        <p><label>UserID: </label>{{detail.emailid}}</p>
+        <p><label>First Name: </label>{{detail.firstname}}</p>
+        <p><label>Last Name: </label>{{detail.lastname}}</p>
+        <p><label>Location: </label>{{detail.locate}}</p>
+        <p><label>Mobile: </label>{{detail.mobile}}</p>
+        <button (click)="goBack()">Ok</button>     
+    </div>

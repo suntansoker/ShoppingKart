@@ -13,6 +13,7 @@ import { LoginComponent } from './login.component';
 
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register.component';
+//import { UserDetailComponent } from './user-detail.component';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, 
@@ -20,7 +21,9 @@ import { RegisterComponent } from './register.component';
 //  CustomersModule, 
     AppRoutingModule ,
     HttpClientModule],
-  declarations: [ AppComponent, AboutComponent, PageNotFoundComponent, LoginComponent,RegisterComponent],
+  declarations: [ AppComponent, AboutComponent, PageNotFoundComponent, LoginComponent,RegisterComponent
+  //UserDetailComponent
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -6,7 +6,7 @@ import { RegisterService } from './register.service';
 import { User } from './models/user.model';
 
 @Component({
-  selector: 'app-register',
+  selector: 'user-register',
   templateUrl: './register.component.html'
 })
 export class RegisterComponent implements OnInit {
@@ -39,6 +39,7 @@ export class RegisterComponent implements OnInit {
                     (data:any) => this.getUsers()
                 );
                 console.log("New User Registered");
+                //this.userDetail.displayUser(formval);
                 this.router.navigate(['login']);
             }
             else{

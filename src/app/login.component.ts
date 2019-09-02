@@ -5,7 +5,8 @@ import { Location } from "@angular/common";
 import { RegisterService} from './register.service';
 import { AuthService} from './auth.service';
 import { User } from './models/user.model';
-import { VirtualTimeScheduler } from 'rxjs';
+//import { VirtualTimeScheduler } from 'rxjs';
+//import { UserDetailComponent } from './user-detail.component';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit {
   constructor(private _regService: RegisterService,
     private _authService: AuthService ,
     private router: Router, 
+    //private userDetail : UserDetailComponent
     //private location: Location
     ) { }
 
@@ -34,7 +36,8 @@ export class LoginComponent implements OnInit {
         //console.log(`${typeof(this.user)}`);
         if(this.user.length==1)
         {
-          this._authService.login();
+          this._authService.login(loginForm.emailid);
+          //this.userDetail.displayUser(data);
           console.log("Logged In");
           this.router.navigate(["../products"]);
         }
