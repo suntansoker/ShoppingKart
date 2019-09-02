@@ -24,6 +24,9 @@ export class AuthService {
     localStorage.removeItem(localStorage.key(0));
   }
 
+  getToken(){
+    return localStorage.key(0);
+  }
   isLoggedIn() {
     if (localStorage.getItem(localStorage.key(0)) != null)
       return true;

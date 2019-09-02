@@ -6,13 +6,13 @@ import { LoginComponent } from './login.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 //import { CustomersLoadGuardService } from './customers/customers-load-guard.service';
 import { RegisterComponent } from './register.component';
-//import { UserDetailComponent } from './user-detail.component';
+import { UserDetailComponent } from './user-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: AboutComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  // { path: 'profile', component: UserDetailComponent},
+  { path: 'profile', component: UserDetailComponent},
   // { path: 'customers', 
   //   loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule),
   //   canLoad: [ CustomersLoadGuardService ]
