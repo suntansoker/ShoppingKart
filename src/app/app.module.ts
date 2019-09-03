@@ -14,15 +14,19 @@ import { LoginComponent } from './login.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register.component';
 import { UserDetailComponent } from './user-detail.component';
+import { PieChartComponent } from './product-chart.component';
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, 
     EmployeesModule, 
 //  CustomersModule, 
     AppRoutingModule ,
-    HttpClientModule],
+    HttpClientModule,
+    ChartsModule
+  ],
   declarations: [ AppComponent, AboutComponent, PageNotFoundComponent, LoginComponent,RegisterComponent,
-  UserDetailComponent
+  UserDetailComponent,PieChartComponent
   ],
   bootstrap: [ AppComponent ]
 })
