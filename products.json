@@ -31,6 +31,14 @@
       "price": 69,
       "quantity": 32,
       "id": 11
+    },
+    {
+      "id": 12,
+      "name": "hjhghj",
+      "description": "jhjhjh",
+      "manufacturer": "vhf",
+      "price": 9.8,
+      "quantity": 4
     }
   ]
 }

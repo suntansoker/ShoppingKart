@@ -2,15 +2,17 @@
     <button *ngIf="showChart" (click)="toggleChart()">Hide Chart</button>
     <button *ngIf="!showChart" (click)="toggleChart()">Show Chart</button>
     <div *ngIf="showChart">
-      <div class="chart">
+      <div class="chart" *ngIf="pieChartData.length">
         <canvas baseChart
           [data]="pieChartData"
           [labels]="pieChartLabels"
           [chartType]="pieChartType"
+          [colors]="pieChartColors"
           [options]="pieChartOptions"
           [legend]="pieChartLegend">
         </canvas>
       </div>
+      <div *ngIf="!pieChartData.length"><h2>No product viewed yet!</h2></div>
       <button (click)="change()">Change pie chart</button>
     </div>
 </div>

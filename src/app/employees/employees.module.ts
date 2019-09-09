@@ -12,6 +12,7 @@ import { EmployeesComponent } from './employees.component';
 import { AddEmployeeFormComponent } from './addemployee-form.component';
 import { EmployeeDetailComponent } from './employee-detail.component';
 import { EditEmployeeComponent } from './employee-edit.component';
+//import { PieChartComponent } from '../product-chart.component';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { EditEmployeeComponent } from './employee-edit.component';
     AddEmployeeFormComponent, 
     EmployeeDetailComponent,
     EditEmployeeComponent
+    //PieChartComponent
   ]
 })
 export class EmployeesModule { }
