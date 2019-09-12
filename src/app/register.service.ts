@@ -26,7 +26,7 @@ export class RegisterService {
     addUser(formValue: any,id:number): any {
         //let empid:number = count + 1;
         let user:User = {
-            id: id,
+            "id": id,
             "emailid": formValue.emailid,
             "passwd": formValue.passwd,
             "firstname": formValue.firstname,

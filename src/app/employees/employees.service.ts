@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Employee } from '../models/employee.model';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class EmployeesService {
@@ -12,7 +14,12 @@ export class EmployeesService {
     };
     constructor(private _http: HttpClient){}
     getEmployees(url=this._prodUrl) {
-        return this._http.get(url);
+        return this._http.get<Employee[]>(url);
+        // return new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve(this._http.get(url).json());
+        //     }, 2000);
+        // });
     }
     
     // getEmployeesbyIDpasswd(logid:string, passwd:string): any {

@@ -12,6 +12,8 @@ import { EmployeesComponent } from './employees.component';
 import { AddEmployeeFormComponent } from './addemployee-form.component';
 import { EmployeeDetailComponent } from './employee-detail.component';
 import { EditEmployeeComponent } from './employee-edit.component';
+import { EmployeesResolverService } from './employee-resolver.service';
+//import { ChartService } from './chart.service';
 //import { PieChartComponent } from '../product-chart.component';
 
 @NgModule({
@@ -22,7 +24,9 @@ import { EditEmployeeComponent } from './employee-edit.component';
   providers: [EmployeesService, 
     AddEmployeeGuardService,
     EmployeeDetailGuardService,
-    EmployeeEditGuardService
+    EmployeeEditGuardService,
+    EmployeesResolverService
+    //ChartService
     ],
   declarations: [EmployeesComponent, 
     AddEmployeeFormComponent, 

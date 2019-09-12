@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { EmployeesService } from './employees.service';
 import { AuthService } from '../auth.service';
 //import {EditEmployeeComponent} from './employee-edit.component';
@@ -15,14 +15,18 @@ export class EmployeesComponent implements OnInit {
   //formref: any;
   constructor(private _employeesService: EmployeesService,
     private _authService: AuthService,
-    private _router: Router
+    private _router: Router,
+    private _route:ActivatedRoute
     //private _editEmployee:EditEmployeeComponent 
-    ) { }
+    ) {
+      this.products = this._route.snapshot.data['employees'];
+     }
 
   ngOnInit() {
     //this.employees = this._employeesService.getEmployees();
     console.log("Employees component called")
     this.getEmployees();
+    //this.products = this._route.snapshot.data['employees'];
   }
 
   getEmployees() {
@@ -30,6 +34,7 @@ export class EmployeesComponent implements OnInit {
       (products:any) =>  this.products = products,
       err => console.log(err)
     );
+    //this._router.navigate(['products']);
   }
 
   // editEmployee(empid) {

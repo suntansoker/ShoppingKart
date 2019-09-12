@@ -17,17 +17,18 @@ export class AddEmployeeFormComponent {
     //this.getEmployees();
   }
 
-  getEmployees() {
-    this._employeeService.getEmployees().subscribe(
-      (products:any) =>  this.products = products,
-      err => console.log(err)
-    );
-  }
+  // getEmployees() {
+  //   this._employeeService.getEmployees().subscribe(
+  //     (products:any) =>  this.products = products,
+  //     err => console.log(err)
+  //   );
+  // }
 
   onSubmit(formValue: any){
     //this.getEmployees();
       this._employeeService.addEmployee(formValue,this.id).subscribe(
-        (data:any) => this.getEmployees()
+        (data:any) => {}
+        //this.getEmployees()
       );
   
     //this._employeeService.addEmployee(formValue); 

@@ -33,12 +33,28 @@
       "id": 11
     },
     {
-      "id": 12,
-      "name": "hjhghj",
-      "description": "jhjhjh",
-      "manufacturer": "vhf",
-      "price": 9.8,
-      "quantity": 4
+      "name": "hurray",
+      "description": "hurray",
+      "manufacturer": "lolwa",
+      "price": 0.15,
+      "quantity": 34,
+      "id": 13
+    },
+    {
+      "name": "dfd",
+      "description": "dgdgedg",
+      "manufacturer": "fggf",
+      "price": 34,
+      "quantity": 34,
+      "id": 15
+    },
+    {
+      "name": "hutjhjh",
+      "description": "jhjh",
+      "manufacturer": "kkjkj67",
+      "price": 54,
+      "quantity": 34,
+      "id": 16
     }
   ]
 }
