@@ -7,6 +7,11 @@ a.active{
     font-weight: bold;
 }
 
+a:hover{
+  color:darkgreen;
+  font-weight: bold;
+}
+
 .lds-spinner {
     top: 10%;
     left: 10%;

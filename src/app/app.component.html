@@ -1,18 +1,24 @@
-<nav>
-    <a style="padding-right:20px" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >About</a>
 
-    <a style="padding-right:20px" routerLink="products" routerLinkActive="active">Products</a>
+<nav class="navbar navbar-light" style="background-color: #90cfeca8;">
+      
+    <a  routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" >About</a>
+
+    <a style="float:left;" routerLink="products" routerLinkActive="active">Products</a>
 
     <!-- <a routerLink="customers" routerLinkActive="active">Customers</a> -->
-
+    <a *ngIf=!isLoggedIn() style="float:right;" routerLink="register" routerLinkActive="active">Register</a>
     <a *ngIf=!isLoggedIn() style="float:right" routerLink="login" routerLinkActive="active">Login</a>
-    <a *ngIf=!isLoggedIn() style="float:right;padding-right:20px" routerLink="register" routerLinkActive="active">Register</a> 
-    <a *ngIf=isLoggedIn() style="float:right" routerLink="logout" routerLinkActive="active" (click)="changeToLoginRoute()">Logout</a>
-   <a *ngIf=isLoggedIn() style="float:right;padding-right:20px" routerLink="profile" routerLinkActive="active">Profile</a>
+     
+    
+   <a *ngIf=isLoggedIn() style="float:right;" routerLink="profile" routerLinkActive="active">Profile</a>
+   <a *ngIf=isLoggedIn() style="float:right" routerLink="logout" routerLinkActive="active" (click)="changeToLoginRoute()">Logout</a>
+
 </nav>
+
 <div class="lds-spinner" *ngIf="isLoading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 <router-outlet></router-outlet>
 <app-pie-chart></app-pie-chart>
 
 
 
+    

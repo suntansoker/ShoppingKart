@@ -1,15 +1,17 @@
 <div>
-    <h2>{{title}}</h2>
-    <label>Search filter: </label>
+    <h2 style="color: rgb(128, 0, 111)">{{title}}</h2>
+    <label style="color:sienna;">Search filter: </label>
     <input type='text' [(ngModel)]='nameFilter'/> 
-    <table>
-        <thead>
+    <table class="table table-hover shadow p-3 mb-5">
+        <thead class="bg-primary">
             <td>Name</td>
             <td>Description</td>
             <td>Manufacturer</td>
             <td>Price</td>
             <td>Quantity</td>
+            <td>Edit/Delete</td>
         </thead>
+        <tbody>
         <tr *ngFor='let employee of products | searchFilter: nameFilter'>
             <td><a [routerLink]="employee.id">
                 {{employee.name}}</a>
@@ -27,11 +29,12 @@
                 {{employee.quantity}}
             </td>
             <!-- <td><button [routerLink]='editEmployee(employee.id)'>Edit</button></td> -->
-            <td><button [routerLink]="[employee.id,'edit']">Edit</button></td>
-            <td><button (click)='deleteEmployee(employee.id)'>Delete</button></td>
+            <td><button class="btn btn-warning" [routerLink]="[employee.id,'edit']">Edit</button>
+            <button class="btn btn-danger" (click)='deleteEmployee(employee.id)'>Delete</button></td>
         </tr>
+        </tbody>
     </table>        
-    <button routerLink="add">Add Product</button><br>
+    <button routerLink="add" class="btn btn-success">Add Product</button><br><br>
     <!-- <app-pie-chart ></app-pie-chart> -->
     <!-- *ngIf=isLoggedIn() -->
 </div>    
