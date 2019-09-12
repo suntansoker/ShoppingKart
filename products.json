@@ -9,7 +9,7 @@
       "id": 1
     },
     {
-      "name": "sayantan",
+      "name": "suntan",
       "description": "dhbfdhbf",
       "manufacturer": "sjhfjshf",
       "price": 69,
@@ -25,7 +25,7 @@
       "id": 5
     },
     {
-      "name": "sunday",
+      "name": "sundays",
       "description": "kdjfkd",
       "manufacturer": "kdjfkd",
       "price": 69,
@@ -33,7 +33,7 @@
       "id": 11
     },
     {
-      "name": "hurray",
+      "name": "hurra",
       "description": "hurray",
       "manufacturer": "lolwa",
       "price": 0.15,
@@ -55,6 +55,14 @@
       "price": 54,
       "quantity": 34,
       "id": 16
+    },
+    {
+      "name": "rogerr",
+      "description": "rogero",
+      "manufacturer": "dkfldk",
+      "price": 345,
+      "quantity": 34,
+      "id": 17
     }
   ]
 }

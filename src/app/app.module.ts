@@ -14,8 +14,9 @@ import { LoginComponent } from './login.component';
 import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register.component';
 import { UserDetailComponent } from './user-detail.component';
-import { PieChartComponent } from './product-chart.component';
+import { PieChartComponent } from './employees/product-chart.component';
 import { ChartsModule } from 'ng2-charts';
+import { ChartService } from './employees/chart.service';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, 
@@ -26,8 +27,10 @@ import { ChartsModule } from 'ng2-charts';
     ChartsModule
   ],
   declarations: [ AppComponent, AboutComponent, PageNotFoundComponent, LoginComponent,RegisterComponent,
-  UserDetailComponent,PieChartComponent
+  UserDetailComponent,
+  PieChartComponent
   ],
+  providers: [ChartService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

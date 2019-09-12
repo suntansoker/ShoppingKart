@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from "@angular/router";
 import { Location } from "@angular/common";
 import {EmployeesService} from './employees.service';
 import {Employee} from '../models/employee.model'
+import { ChartService } from './chart.service';
 //import {PieChartComponent} from '../product-chart.component';
 
 @Component({
@@ -14,7 +15,7 @@ export class EmployeeDetailComponent implements OnInit {
     employees: Employee[];
     employee: Employee;
     newUrl: string;
-    constructor(private route: ActivatedRoute, private location: Location,private _employeesService: EmployeesService
+    constructor(private route: ActivatedRoute, private location: Location,private _employeesService: EmployeesService,private _chartService: ChartService
         //private pieChart: PieChartComponent
         ){
     }
@@ -31,6 +32,7 @@ export class EmployeeDetailComponent implements OnInit {
                     this.employee=this.employees[0];
                 console.log(`Hey ${this.employee.name}`);
                 console.log(`Hey ${this.employee.id}`);
+                this._chartService.updateData([this.employee.name,this.employee.id.toString()])
                 //this.pieChart.getVisit([this.employee.name,this.employee.id.toString])
             },
             //this.pieChart.getVisit([this.employee.name,this.employee.id])},

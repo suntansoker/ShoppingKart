@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import {EmployeesComponent} from './employees.component';
 import { EmployeesService } from "./employees.service";
 import { Employee } from '../models/employee.model';
+import { ChartService } from './chart.service';
 
 @Component({
   selector: 'employee-edit',
@@ -21,7 +22,8 @@ export class EditEmployeeComponent {
   // manufacturer: string="nil";
   // price: number=0;
   // quantity: number=0;
-  constructor(private route: ActivatedRoute,private _employeeService: EmployeesService, private router: Router
+  constructor(private route: ActivatedRoute,private _employeeService: EmployeesService, private router: Router,
+    private _chartService:ChartService
     //private _empcomp:EmployeesComponent
     ) { }
   ngOnInit() {
@@ -62,8 +64,10 @@ export class EditEmployeeComponent {
     
     //console.log(`${this.newUrl}`);
       this._employeeService.editEmployee(formValue,this.id).subscribe(
-        (data:any) => this._employeeService.getEmployees()
-      );
+        (data:any) => {
+          this._employeeService.getEmployees()
+          this._chartService.updateData([formValue.name,this.id.toString(),"edit"])
+        });
   
     //this._employeeService.addEmployee(formValue); 
     this.router.navigate(['products']);

@@ -2,7 +2,10 @@
     <button *ngIf="showChart" (click)="toggleChart()">Hide Chart</button>
     <button *ngIf="!showChart" (click)="toggleChart()">Show Chart</button>
     <div *ngIf="showChart">
-      <div class="chart" *ngIf="pieChartData.length">
+      <!-- <p>{{list[0]}}</p>
+      <p>{{list[1]}}</p> -->
+      <div class="chart" *ngIf="pieChartLabels.length">
+        <!-- {{pieChartData.length}} -->
         <canvas baseChart
           [data]="pieChartData"
           [labels]="pieChartLabels"
@@ -12,7 +15,7 @@
           [legend]="pieChartLegend">
         </canvas>
       </div>
-      <div *ngIf="!pieChartData.length"><h2>No product viewed yet!</h2></div>
-      <button (click)="change()">Change pie chart</button>
+      <div *ngIf="!pieChartLabels.length"><h2>No product viewed yet!</h2></div>
+      <!-- <button (click)="change()">Change pie chart</button> -->
     </div>
 </div>
