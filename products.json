@@ -9,60 +9,28 @@
       "id": 1
     },
     {
-      "name": "suntan",
-      "description": "dhbfdhbf",
+      "name": "HP",
+      "description": "Laptop",
       "manufacturer": "sjhfjshf",
-      "price": 69,
+      "price": 700,
       "quantity": 70,
-      "id": 3
+      "id": 2
     },
     {
-      "name": "erer",
-      "description": "erer",
+      "name": "Dell",
+      "description": "Laptop",
       "manufacturer": "erer",
       "price": 34,
       "quantity": 3,
-      "id": 5
+      "id": 3
     },
     {
-      "name": "sunday",
-      "description": "kdjfkd",
+      "name": "GeyserX",
+      "description": "geyser",
       "manufacturer": "kdjfkd",
-      "price": 69,
+      "price": 500,
       "quantity": 32,
-      "id": 11
-    },
-    {
-      "name": "hurra",
-      "description": "hurray",
-      "manufacturer": "lolwa",
-      "price": 0.15,
-      "quantity": 34,
-      "id": 13
-    },
-    {
-      "name": "dfd",
-      "description": "dgdgedg",
-      "manufacturer": "fggf",
-      "price": 34,
-      "quantity": 34,
-      "id": 15
-    },
-    {
-      "name": "hutjhjh",
-      "description": "jhjh",
-      "manufacturer": "kkjkj67",
-      "price": 54,
-      "quantity": 34,
-      "id": 16
-    },
-    {
-      "name": "rogerr",
-      "description": "rogero",
-      "manufacturer": "dkfldk",
-      "price": 345,
-      "quantity": 34,
-      "id": 17
+      "id": 4
     }
   ]
 }
