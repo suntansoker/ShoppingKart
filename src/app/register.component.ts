@@ -1,13 +1,14 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Location } from "@angular/common";
+import { Location, registerLocaleData } from "@angular/common";
 import { RegisterService } from './register.service';
 import { User } from './models/user.model';
 
 @Component({
   selector: 'user-register',
-  templateUrl: './register.component.html'
+  templateUrl: './register.component.html',
+  styleUrls:['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
     //@ViewChild('regForm', {static: false}) addEmployeeForm:NgForm;

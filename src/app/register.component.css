@@ -1,0 +1,10 @@
+h1{
+    margin: 0.5rem;
+    color: mediumaquamarine;
+}
+
+label{
+    font-weight: bold;
+    margin: 0.5rem;
+    color: chocolate; 
+}

@@ -10,7 +10,8 @@ import { User } from './models/user.model';
 
 @Component({
   selector: 'app-login',
-  templateUrl: './login.component.html'
+  templateUrl: './login.component.html',
+  styleUrls:['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   @ViewChild('loginForm', {static: false}) LoginForm:NgForm;

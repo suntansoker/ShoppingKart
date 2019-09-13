@@ -8,7 +8,8 @@ import { ChartService } from './chart.service';
 
 @Component({
   selector: 'employee-edit',
-  templateUrl: './employee-edit.component.html'
+  templateUrl: './employee-edit.component.html',
+  styleUrls:['./employee-edit.component.css']
 })
 export class EditEmployeeComponent {
   @ViewChild('formval', {static: false}) editEmployeeForm:NgForm;

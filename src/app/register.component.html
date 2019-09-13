@@ -3,29 +3,48 @@
     <form #regForm="ngForm" (ngSubmit)="onSubmit(regForm.value)">
       <div>
         <label for="emailid">EmailID: </label>
-        <input type="text" id="emailid" name="emailid" [(ngModel)]="emailid" required>
+        <input type="text" id="emailid" name="emailid" [(ngModel)]="emailid" placeholder="name@example.com" required minlength="3" #nameRef="ngModel">
+        <div *ngIf="nameRef.invalid && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+            <div *ngIf="nameRef.errors.required">
+              Name is required.
+            </div>
+            <div *ngIf="nameRef.errors.minlength">
+              Name must be at least 3 characters long.
+            </div>
+          </div>
       </div>
       <div>
         <label for="passwd">Password: </label>
-        <input type="password" id="passwd" name="passwd" [(ngModel)]="passwd" required>
+        <input type="password" id="passwd" name="passwd" [(ngModel)]="passwd" aria-describedby="passwordHelpInline" required minlength="8" #passRef="ngModel">
+        <small id="passwordHelpInline" class="text-muted">
+            Must be 8-20 characters long.
+          </small>
+          <div *ngIf="passRef.invalid && (passRef.dirty || passRef.touched)" class="alert alert-danger">
+              <div *ngIf="passRef.errors.required">
+                Password is required.
+              </div>
+              <div *ngIf="passRef.errors.minlength">
+                Password must be at least 8 characters long.
+              </div>
+            </div>
       </div>
       <div>
         <label for="firstname">First name: </label>
-        <input type="text" id="firstname" name="firstname" [(ngModel)]="firstname" required>
+        <input type="text" id="firstname" name="firstname" [(ngModel)]="firstname">
       </div>
       <div>
         <label for="lastname">Last name: </label>
-        <input type="text" id="lastname" name="lastname" [(ngModel)]="lastname" required>
+        <input type="text" id="lastname" name="lastname" [(ngModel)]="lastname">
       </div>
       <div>
         <label for="locate">Location: </label>
-        <input type="text" id="locate" name="locate" [(ngModel)]="locate" required>
+        <input type="text" id="locate" name="locate" [(ngModel)]="locate">
       </div>
       <div>
         <label for="mobile">Mobile Number: </label>
-        <input type="number" id="mobile" name="mobile" [(ngModel)]="mobile" required>
+        <input type="number" id="mobile" name="mobile" [(ngModel)]="mobile">
       </div>
       <br>
-      <button type="submit" [disabled]="regForm.invalid">Submit</button>
-    </form>
+      <button type="submit" class="btn btn-outline-success" [disabled]="regForm.invalid">Submit</button><br>
+    </form><br>
   </div>

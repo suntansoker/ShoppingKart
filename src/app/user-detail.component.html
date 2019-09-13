@@ -1,9 +1,15 @@
-<h2>Profile Details</h2>
-    <div *ngFor= 'let detail of details'>
-        <p><label>UserID: </label>{{detail.emailid}}</p>
-        <p><label>First Name: </label>{{detail.firstname}}</p>
-        <p><label>Last Name: </label>{{detail.lastname}}</p>
-        <p><label>Location: </label>{{detail.location}}</p>
-        <p><label>Mobile: </label>{{detail.mobile}}</p>
-        <button (click)="goBack()">Ok</button>     
+  <div class="card w-100 h-100" style="width:30rem;text-align:center;">
+    <h2 style="text-align:center;">Profile Details</h2>
+    <div class="icon" style="text-align:center;">
+            <i class="fa fa-user-circle fa-3x"></i>
+        </div>
+    
+        <div class="card-text" *ngFor= 'let detail of details' style="text-align:center;">
+            <p><label>UserID: </label>{{detail.emailid}}</p>
+            <p><label>First Name: </label>{{detail.firstname}}</p>
+            <p><label>Last Name: </label>{{detail.lastname}}</p>
+            <p><label>Location: </label>{{detail.location}}</p>
+            <p><label>Mobile: </label>{{detail.mobile}}</p>
+            <button class="btn btn-success" (click)="goBack()">Ok</button><br>    
+        </div>
     </div>
